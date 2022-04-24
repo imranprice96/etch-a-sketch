@@ -10,4 +10,9 @@ for(i=0; i<16; i++){
     }
 };
 
+const pixels = document.querySelectorAll('.gridItem');
+pixels.forEach(pixel => pixel.addEventListener('mouseover',  (e) => {
+    e.target.style.backgroundColor = 'black';
+}));
+
 
