@@ -22,7 +22,7 @@ body{
     background-color: #CFFFB5;
 }
 
-.grid-container{
+#grid-box{
     width: 960px;
     height: 960px;
     display: grid;
@@ -34,7 +34,6 @@ body{
 
 .gridItem{
     background-color: white;
-    padding: 20px;
     font-size: 20px;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.233);
