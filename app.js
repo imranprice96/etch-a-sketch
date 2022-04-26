@@ -1,6 +1,7 @@
 
 const gridBox = document.querySelector('#grid-box');
-let size = 16;
+let size = 64;
+let blackDrawMode = true;
 
 function createGrid(size){
 
@@ -21,7 +22,12 @@ function draw(){
     const pixels = document.querySelectorAll('.gridItem');
     pixels.forEach(pixel => pixel.addEventListener('mouseover',  (e) => {
         let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        if(blackDrawMode) {
+            e.target.style.backgroundColor = 'black';
+        }else{
         e.target.style.backgroundColor = `#${randomColor}`;
+        }
+        
     }));
 };
 
@@ -42,4 +48,6 @@ function clearGrid(){
 
 };
 
-// add toggle black or color mode
+function colourMode(){
+    blackDrawMode = !blackDrawMode;
+}
